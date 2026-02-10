@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="#D4A94B" stroke-width="2" opacity="0.3"/>
+  
+  <!-- Decorative dragon-inspired swirl -->
+  <path d="M100 30 C130 30, 160 60, 160 90 C160 120, 140 140, 120 140 C100 140, 90 130, 90 110 C90 90, 100 80, 110 80 C120 80, 125 90, 120 95" 
+        fill="none" stroke="#D4A94B" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
+  <path d="M100 170 C70 170, 40 140, 40 110 C40 80, 60 60, 80 60 C100 60, 110 70, 110 90 C110 110, 100 120, 90 120 C80 120, 75 110, 80 105" 
+        fill="none" stroke="#D4A94B" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
+  
+  <!-- Chinese text: 四時鑑 -->
+  <text x="100" y="75" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold" fill="#8B2942">四</text>
+  <text x="100" y="110" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold" fill="#8B2942">時</text>
+  <text x="100" y="145" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold" fill="#8B2942">鑑</text>
+  
+  <!-- Decorative clouds -->
+  <circle cx="55" cy="160" r="6" fill="#D4A94B" opacity="0.15"/>
+  <circle cx="62" cy="158" r="5" fill="#D4A94B" opacity="0.15"/>
+  <circle cx="145" cy="40" r="6" fill="#D4A94B" opacity="0.15"/>
+  <circle cx="152" cy="38" r="5" fill="#D4A94B" opacity="0.15"/>
+</svg>

@@ -1,0 +1,407 @@
+{
+  "generatedAt": "2026-02-08T13:08:16.844Z",
+  "totalAssets": 16,
+  "assets": [
+    {
+      "filename": "charity-foundation.jpg",
+      "originalPath": "/Users/vince/Documents/sishijian/assets/images/charity-foundation.jpg",
+      "targetPath": "/assets/seed/charity-foundation.jpg",
+      "dimensions": {
+        "width": 2132,
+        "height": 1238
+      },
+      "sizeBytes": 4352117,
+      "mimeType": "image/jpeg",
+      "suggestedUse": [
+        "culture-art",
+        "social-impact"
+      ],
+      "recommendedPages": [
+        "culture-art"
+      ],
+      "altText": {
+        "zh-HK": "公益基金會活動照片，展示社會創新與公益合作",
+        "en": "Charity foundation activity photo showing social innovation",
+        "zh-Hans": "公益基金会活动照片，展示社会创新与公益合作"
+      },
+      "canBeHero": true
+    },
+    {
+      "filename": "hong-kong-scenery.png",
+      "originalPath": "/Users/vince/Documents/sishijian/assets/images/hong-kong-scenery.png",
+      "targetPath": "/assets/seed/hong-kong-scenery.png",
+      "dimensions": {
+        "width": 1152,
+        "height": 648
+      },
+      "sizeBytes": 1767443,
+      "mimeType": "image/png",
+      "suggestedUse": [
+        "hero",
+        "location"
+      ],
+      "recommendedPages": [
+        "homepage",
+        "about"
+      ],
+      "altText": {
+        "zh-HK": "香港城市景觀照片，展示維港兩岸的繁華景色",
+        "en": "Hong Kong cityscape photo showcasing Victoria Harbour",
+        "zh-Hans": "香港城市景观照片，展示维港两岸的繁华景色"
+      },
+      "canBeHero": false
+    },
+    {
+      "filename": "misc-web-asset-01.jpg",
+      "originalPath": "/Users/vince/Documents/sishijian/assets/images/misc-web-asset-01.jpg",
+      "targetPath": "/assets/seed/misc-web-asset-01.jpg",
+      "dimensions": {
+        "height": 1080,
+        "width": 1440
+      },
+      "sizeBytes": 147241,
+      "mimeType": "image/jpeg",
+      "suggestedUse": [
+        "content",
+        "decorative"
+      ],
+      "recommendedPages": [
+        "general"
+      ],
+      "altText": {
+        "zh-HK": "圖片：misc web asset 01",
+        "en": "Image: misc web asset 01",
+        "zh-Hans": "图片：misc web asset 01"
+      },
+      "canBeHero": false
+    },
+    {
+      "filename": "misc-web-asset-02.jpg",
+      "originalPath": "/Users/vince/Documents/sishijian/assets/images/misc-web-asset-02.jpg",
+      "targetPath": "/assets/seed/misc-web-asset-02.jpg",
+      "dimensions": {
+        "height": 1080,
+        "width": 1188
+      },
+      "sizeBytes": 95530,
+      "mimeType": "image/jpeg",
+      "suggestedUse": [
+        "content",
+        "decorative"
+      ],
+      "recommendedPages": [
+        "general"
+      ],
+      "altText": {
+        "zh-HK": "圖片：misc web asset 02",
+        "en": "Image: misc web asset 02",
+        "zh-Hans": "图片：misc web asset 02"
+      },
+      "canBeHero": false
+    },
+    {
+      "filename": "misc-web-asset-03.jpg",
+      "originalPath": "/Users/vince/Documents/sishijian/assets/images/misc-web-asset-03.jpg",
+      "targetPath": "/assets/seed/misc-web-asset-03.jpg",
+      "dimensions": {
+        "height": 1080,
+        "width": 1440
+      },
+      "sizeBytes": 97925,
+      "mimeType": "image/jpeg",
+      "suggestedUse": [
+        "content",
+        "decorative"
+      ],
+      "recommendedPages": [
+        "general"
+      ],
+      "altText": {
+        "zh-HK": "圖片：misc web asset 03",
+        "en": "Image: misc web asset 03",
+        "zh-Hans": "图片：misc web asset 03"
+      },
+      "canBeHero": false
+    },
+    {
+      "filename": "misc-web-asset-04.jpg",
+      "originalPath": "/Users/vince/Documents/sishijian/assets/images/misc-web-asset-04.jpg",
+      "targetPath": "/assets/seed/misc-web-asset-04.jpg",
+      "dimensions": {
+        "height": 1080,
+        "width": 1440
+      },
+      "sizeBytes": 123193,
+      "mimeType": "image/jpeg",
+      "suggestedUse": [
+        "content",
+        "decorative"
+      ],
+      "recommendedPages": [
+        "general"
+      ],
+      "altText": {
+        "zh-HK": "圖片：misc web asset 04",
+        "en": "Image: misc web asset 04",
+        "zh-Hans": "图片：misc web asset 04"
+      },
+      "canBeHero": false
+    },
+    {
+      "filename": "presentation-cover-copy.png",
+      "originalPath": "/Users/vince/Documents/sishijian/assets/images/presentation-cover-copy.png",
+      "targetPath": "/assets/seed/presentation-cover-copy.png",
+      "dimensions": {
+        "width": 1920,
+        "height": 1084
+      },
+      "sizeBytes": 3414442,
+      "mimeType": "image/png",
+      "suggestedUse": [
+        "hero",
+        "banner",
+        "content",
+        "about"
+      ],
+      "recommendedPages": [
+        "homepage",
+        "about",
+        "services"
+      ],
+      "altText": {
+        "zh-HK": "四時鑑公司介紹簡報封面，展示品牌與中國文化推廣的商業賦能平台理念",
+        "en": "Sishijian company presentation cover, showcasing brand and Chinese culture promotion platform",
+        "zh-Hans": "四时鉴公司介绍简报封面，展示品牌与中国文化推广的商业赋能平台理念"
+      },
+      "canBeHero": true
+    },
+    {
+      "filename": "presentation-cover.png",
+      "originalPath": "/Users/vince/Documents/sishijian/assets/images/presentation-cover.png",
+      "targetPath": "/assets/seed/presentation-cover.png",
+      "dimensions": {
+        "width": 899,
+        "height": 569
+      },
+      "sizeBytes": 1289645,
+      "mimeType": "image/png",
+      "suggestedUse": [
+        "hero",
+        "banner",
+        "content",
+        "about"
+      ],
+      "recommendedPages": [
+        "homepage",
+        "about",
+        "services"
+      ],
+      "altText": {
+        "zh-HK": "四時鑑公司介紹簡報封面，展示品牌與中國文化推廣的商業賦能平台理念",
+        "en": "Sishijian company presentation cover, showcasing brand and Chinese culture promotion platform",
+        "zh-Hans": "四时鉴公司介绍简报封面，展示品牌与中国文化推广的商业赋能平台理念"
+      },
+      "canBeHero": false
+    },
+    {
+      "filename": "presentation-slide-01.png",
+      "originalPath": "/Users/vince/Documents/sishijian/assets/images/presentation-slide-01.png",
+      "targetPath": "/assets/seed/presentation-slide-01.png",
+      "dimensions": {
+        "width": 795,
+        "height": 1080
+      },
+      "sizeBytes": 1719484,
+      "mimeType": "image/png",
+      "suggestedUse": [
+        "content",
+        "about"
+      ],
+      "recommendedPages": [
+        "about",
+        "services"
+      ],
+      "altText": {
+        "zh-HK": "圖片：presentation slide 01",
+        "en": "Image: presentation slide 01",
+        "zh-Hans": "图片：presentation slide 01"
+      },
+      "canBeHero": false
+    },
+    {
+      "filename": "presentation-slide-02.png",
+      "originalPath": "/Users/vince/Documents/sishijian/assets/images/presentation-slide-02.png",
+      "targetPath": "/assets/seed/presentation-slide-02.png",
+      "dimensions": {
+        "width": 1920,
+        "height": 1084
+      },
+      "sizeBytes": 4411953,
+      "mimeType": "image/png",
+      "suggestedUse": [
+        "content",
+        "about"
+      ],
+      "recommendedPages": [
+        "about",
+        "services"
+      ],
+      "altText": {
+        "zh-HK": "圖片：presentation slide 02",
+        "en": "Image: presentation slide 02",
+        "zh-Hans": "图片：presentation slide 02"
+      },
+      "canBeHero": true
+    },
+    {
+      "filename": "presentation-slide-03.png",
+      "originalPath": "/Users/vince/Documents/sishijian/assets/images/presentation-slide-03.png",
+      "targetPath": "/assets/seed/presentation-slide-03.png",
+      "dimensions": {
+        "width": 918,
+        "height": 839
+      },
+      "sizeBytes": 1788564,
+      "mimeType": "image/png",
+      "suggestedUse": [
+        "content",
+        "about"
+      ],
+      "recommendedPages": [
+        "about",
+        "services"
+      ],
+      "altText": {
+        "zh-HK": "圖片：presentation slide 03",
+        "en": "Image: presentation slide 03",
+        "zh-Hans": "图片：presentation slide 03"
+      },
+      "canBeHero": false
+    },
+    {
+      "filename": "presentation-slide-04.png",
+      "originalPath": "/Users/vince/Documents/sishijian/assets/images/presentation-slide-04.png",
+      "targetPath": "/assets/seed/presentation-slide-04.png",
+      "dimensions": {
+        "width": 1920,
+        "height": 566
+      },
+      "sizeBytes": 1239898,
+      "mimeType": "image/png",
+      "suggestedUse": [
+        "content",
+        "about"
+      ],
+      "recommendedPages": [
+        "about",
+        "services"
+      ],
+      "altText": {
+        "zh-HK": "圖片：presentation slide 04",
+        "en": "Image: presentation slide 04",
+        "zh-Hans": "图片：presentation slide 04"
+      },
+      "canBeHero": true
+    },
+    {
+      "filename": "presentation-slide-05.png",
+      "originalPath": "/Users/vince/Documents/sishijian/assets/images/presentation-slide-05.png",
+      "targetPath": "/assets/seed/presentation-slide-05.png",
+      "dimensions": {
+        "width": 826,
+        "height": 1080
+      },
+      "sizeBytes": 1642260,
+      "mimeType": "image/png",
+      "suggestedUse": [
+        "content",
+        "about"
+      ],
+      "recommendedPages": [
+        "about",
+        "services"
+      ],
+      "altText": {
+        "zh-HK": "圖片：presentation slide 05",
+        "en": "Image: presentation slide 05",
+        "zh-Hans": "图片：presentation slide 05"
+      },
+      "canBeHero": false
+    },
+    {
+      "filename": "presentation-slide-06.png",
+      "originalPath": "/Users/vince/Documents/sishijian/assets/images/presentation-slide-06.png",
+      "targetPath": "/assets/seed/presentation-slide-06.png",
+      "dimensions": {
+        "width": 1048,
+        "height": 779
+      },
+      "sizeBytes": 1733802,
+      "mimeType": "image/png",
+      "suggestedUse": [
+        "content",
+        "about"
+      ],
+      "recommendedPages": [
+        "about",
+        "services"
+      ],
+      "altText": {
+        "zh-HK": "圖片：presentation slide 06",
+        "en": "Image: presentation slide 06",
+        "zh-Hans": "图片：presentation slide 06"
+      },
+      "canBeHero": false
+    },
+    {
+      "filename": "presentation-slide-07.png",
+      "originalPath": "/Users/vince/Documents/sishijian/assets/images/presentation-slide-07.png",
+      "targetPath": "/assets/seed/presentation-slide-07.png",
+      "dimensions": {
+        "width": 879,
+        "height": 1081
+      },
+      "sizeBytes": 1149418,
+      "mimeType": "image/png",
+      "suggestedUse": [
+        "content",
+        "about"
+      ],
+      "recommendedPages": [
+        "about",
+        "services"
+      ],
+      "altText": {
+        "zh-HK": "圖片：presentation slide 07",
+        "en": "Image: presentation slide 07",
+        "zh-Hans": "图片：presentation slide 07"
+      },
+      "canBeHero": false
+    },
+    {
+      "filename": "presentation-slide-08.png",
+      "originalPath": "/Users/vince/Documents/sishijian/assets/images/presentation-slide-08.png",
+      "targetPath": "/assets/seed/presentation-slide-08.png",
+      "dimensions": {
+        "width": 918,
+        "height": 839
+      },
+      "sizeBytes": 940302,
+      "mimeType": "image/png",
+      "suggestedUse": [
+        "content",
+        "about"
+      ],
+      "recommendedPages": [
+        "about",
+        "services"
+      ],
+      "altText": {
+        "zh-HK": "圖片：presentation slide 08",
+        "en": "Image: presentation slide 08",
+        "zh-Hans": "图片：presentation slide 08"
+      },
+      "canBeHero": false
+    }
+  ]
+}

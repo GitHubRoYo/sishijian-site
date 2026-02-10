@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40">
+  <!-- Cookery with chef hat motif -->
+  <g transform="translate(6,4)">
+    <!-- Chef hat icon -->
+    <ellipse cx="12" cy="8" rx="8" ry="6" fill="none" stroke="#ffffff" stroke-width="1.5"/>
+    <rect x="5" y="12" width="14" height="8" rx="1" fill="none" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="8" cy="5" r="2.5" fill="#ffffff" opacity="0.3"/>
+    <circle cx="12" cy="3.5" r="2.5" fill="#ffffff" opacity="0.3"/>
+    <circle cx="16" cy="5" r="2.5" fill="#ffffff" opacity="0.3"/>
+    <path d="M5,14 Q12,17 19,14" fill="none" stroke="#ffffff" stroke-width="1"/>
+  </g>
+  <text x="32" y="25" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="600" fill="#ffffff" font-style="italic" letter-spacing="0.5">Cookery</text>
+</svg>

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40">
+  <!-- 香港01 (HK01) - distinctive "01" number mark -->
+  <text x="8" y="27" font-family="'Noto Sans SC', 'PingFang SC', sans-serif" font-size="13" font-weight="600" fill="#ffffff" letter-spacing="1" opacity="0.8">香港</text>
+  <text x="42" y="30" font-family="'Helvetica Neue', Arial, sans-serif" font-size="28" font-weight="900" fill="#ffffff" letter-spacing="-1">01</text>
+</svg>

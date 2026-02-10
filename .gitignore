@@ -1,0 +1,32 @@
+.DS_Store
+*.log
+*.tsbuildinfo
+
+# Node
+node_modules/
+.pnp.*
+
+# Next
+.next/
+out/
+
+# Payload
+media/
+
+# Env
+.env
+.env.*
+!.env.example
+
+# Misc
+coverage/
+.turbo/
+.vercel/
+
+# IDE / tools
+.trae/
+deploy.sh
+create_repo.py
+setup_vercel.py
+setup_vercel_v2.py
+update_vercel.py

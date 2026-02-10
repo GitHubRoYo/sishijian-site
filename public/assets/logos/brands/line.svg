@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40">
+  <!-- LINE messaging app - speech bubble with LINE text -->
+  <g transform="translate(30,2)">
+    <!-- Speech bubble shape -->
+    <path d="M30,3 C46,3 58,11 58,21 C58,31 46,37 30,37 C27,37 24,36.5 21,36 L14,39 L16,33 C8,30 2,26 2,21 C2,11 14,3 30,3 Z" fill="none" stroke="#ffffff" stroke-width="2"/>
+    <!-- LINE text inside bubble -->
+    <text x="30" y="24" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="1.5">LINE</text>
+  </g>
+</svg>

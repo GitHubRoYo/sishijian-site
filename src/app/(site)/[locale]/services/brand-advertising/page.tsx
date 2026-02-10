@@ -1,0 +1,36 @@
+import type { Metadata } from 'next'
+import { ServicePageTemplate } from '@/components/services/ServicePageTemplate'
+import { Locale } from '@/lib/i18n'
+import { find, type ServicePage } from '@/lib/api'
+
+export const dynamic = 'force-dynamic'
+
+interface ServicePageProps {
+  params: Promise<{ locale: Locale }>
+}
+
+export async function generateMetadata({ params }: ServicePageProps): Promise<Metadata> {
+  const { locale } = await params
+  const res = await find<ServicePage>('service-pages', locale, {
+    'where[slug][equals]': 'brand-advertising',
+    limit: 1,
+  })
+  const doc = res.docs[0]
+
+  return {
+    title: doc?.seo?.title || '品牌廣告業務 - 四時鑑',
+    description: doc?.seo?.description,
+  }
+}
+
+export default async function BrandAdvertisingPage({ params }: ServicePageProps) {
+  const { locale } = await params
+  return (
+    <>
+      <h1 className="sr-only">品牌廣告業務</h1>
+      <h2 className="sr-only">服務詳情</h2>
+      <ServicePageTemplate locale={locale} slug="brand-advertising" />
+    </>
+  )
+}
+

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40">
+  <!-- Play Easy -->
+  <g transform="translate(6,10)">
+    <!-- Play triangle icon -->
+    <polygon points="0,0 0,20 14,10" fill="#ffffff"/>
+  </g>
+  <text x="26" y="18" font-family="'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="700" fill="#ffffff" letter-spacing="2">PLAY</text>
+  <text x="26" y="30" font-family="'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="300" fill="#ffffff" letter-spacing="2">EASY</text>
+</svg>

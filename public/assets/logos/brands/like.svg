@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40">
+  <!-- Like - thumbs up icon + text -->
+  <g transform="translate(14,6)">
+    <!-- Thumbs up icon -->
+    <path d="M10,28 L10,14 L14,14 L18,4 C18,4 20,4 20,6 L18,14 L26,14 C28,14 29,16 28,18 L25,28 C24.5,29 23,30 22,30 L10,28 Z" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linejoin="round"/>
+    <rect x="4" y="14" width="6" height="16" rx="1" fill="none" stroke="#ffffff" stroke-width="1.8"/>
+  </g>
+  <text x="72" y="25" font-family="'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#ffffff" letter-spacing="1">Like</text>
+</svg>

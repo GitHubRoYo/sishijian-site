@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40">
+  <!-- Yahoo! recognizable Y shape and wordmark -->
+  <g transform="translate(10,4)">
+    <!-- Stylized Y mark -->
+    <path d="M4,6 L16,20 L16,32" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M28,6 L16,20" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="24" cy="8" r="2.5" fill="#ffffff"/>
+  </g>
+  <!-- Yahoo! text -->
+  <text x="48" y="26" font-family="'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff" letter-spacing="-0.3">Yahoo!</text>
+</svg>

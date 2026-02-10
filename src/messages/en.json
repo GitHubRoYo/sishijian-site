@@ -1,0 +1,96 @@
+{
+  "common": {
+    "ctaConsult": "Contact",
+    "learnMore": "Learn more",
+    "viewAllCases": "View all cases",
+    "submit": "Submit",
+    "submitting": "Submitting",
+    "required": "Required",
+    "optional": "Optional"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "cases": "Cases",
+    "contact": "Contact"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Leave your request and we will follow up.",
+    "fields": {
+      "name": "Name",
+      "company": "Company",
+      "phone": "Phone",
+      "email": "Email",
+      "interests": "Interested services",
+      "partnershipType": "Partnership type",
+      "industry": "Industry",
+      "message": "Message"
+    },
+    "interests": {
+      "brandAdvertising": "Brand advertising",
+      "cultureArt": "Culture & art",
+      "intangibleHeritage": "Intangible heritage education",
+      "culturalExperience": "Cultural study & local exploration",
+      "other": "Other"
+    },
+    "partnershipTypes": {
+      "brandClient": "Brand client",
+      "artist": "Artist / inheritor",
+      "charity": "Charity / NGO",
+      "media": "Media",
+      "other": "Other"
+    },
+    "placeholders": {
+      "name": "Your name",
+      "company": "Company name",
+      "phone": "Phone number",
+      "email": "Email address",
+      "partnershipType": "Select a partnership type",
+      "industry": "Select an industry",
+      "message": "Briefly describe your request"
+    },
+    "validationError": "Please check required fields and verify the email format.",
+    "successTitle": "Received",
+    "successDesc": "We will contact you soon.",
+    "errorTitle": "Submission failed",
+    "errorDesc": "Please try again later."
+  },
+  "leadModal": {
+    "title": "Contact",
+    "subtitle": "Leave your details and we will follow up during business hours with initial guidance.",
+    "submit": "Submit",
+    "close": "Close",
+    "successTitle": "Received",
+    "successDesc": "We will reach out using the contact information you provided.",
+    "errorTitle": "Submission failed",
+    "submitError": "Please try again later.",
+    "validationError": "Please check required fields and verify the email format.",
+    "validationNeedContact": "Please provide at least a phone number or an email address.",
+    "placeholders": {
+      "name": "Your name",
+      "company": "Company (optional)",
+      "phone": "Phone (optional)",
+      "email": "Email",
+      "message": "Briefly describe your request (optional)"
+    },
+    "whatYouGetTitle": "What you will get",
+    "whatYouGet1": "Quick clarification of goals and needs",
+    "whatYouGet2": "Suggested service modules and collaboration approach",
+    "whatYouGet3": "Next-step checklist",
+    "privacyNote": "We will only use your information to contact you about your request."
+  },
+  "newsletter": {
+    "title": "Newsletter",
+    "subtitle": "Get updates on cases and events",
+    "placeholder": "Email address",
+    "submit": "Subscribe",
+    "submitting": "Submitting",
+    "note": "You can unsubscribe at any time.",
+    "invalidEmail": "Please enter a valid email address.",
+    "success": "Subscribed. Thank you.",
+    "alreadySubscribed": "You are already subscribed.",
+    "error": "Submission failed. Please try again later."
+  }
+}

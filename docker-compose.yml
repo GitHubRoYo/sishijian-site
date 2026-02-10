@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: sishijian-db
+    environment:
+      POSTGRES_USER: sishijian
+      POSTGRES_PASSWORD: sishijian123
+      POSTGRES_DB: sishijian
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U sishijian -d sishijian"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sishijian-web
+    environment:
+      - DATABASE_URI=postgresql://sishijian:sishijian123@postgres:5432/sishijian
+      - PAYLOAD_SECRET=your-secret-key-here-change-in-production
+      - NEXT_PUBLIC_SERVER_URL=http://localhost:3000
+      - PAYLOAD_PUBLIC_SERVER_URL=http://localhost:3000
+    ports:
+      - "3000:3000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - ./public:/app/public
+      - ./media:/app/media
+
+volumes:
+  postgres_data:

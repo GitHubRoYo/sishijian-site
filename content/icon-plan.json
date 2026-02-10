@@ -1,0 +1,104 @@
+{
+  "generatedAt": "2026-02-08T17:59:11Z",
+  "icons": {
+    "global": {
+      "library": "lucide-react",
+      "style": "outline"
+    },
+    "pages": {
+      "homepage": {
+        "hero": "Sparkles",
+        "services": "Layers",
+        "cases": "Briefcase",
+        "partners": "Handshake",
+        "cta": "ArrowRight"
+      },
+      "about": {
+        "mission": "Target",
+        "vision": "Eye",
+        "dualWheel": "GitMerge",
+        "strengths": "Award"
+      },
+      "services": {
+        "brandAdvertising": {
+          "integratedMarketing": "Radio",
+          "localLife": "MapPin",
+          "mediaPR": "Newspaper",
+          "brandDigital": "LineChart"
+        },
+        "cultureArt": {
+          "education": "GraduationCap",
+          "tours": "Compass",
+          "ipCollab": "Palette",
+          "charity": "Heart"
+        }
+      },
+      "cases": {
+        "filter": "Filter",
+        "category": "Tag",
+        "detail": {
+          "background": "Building2",
+          "strategy": "Lightbulb",
+          "results": "Award"
+        }
+      },
+      "contact": {
+        "form": "Send",
+        "location": "MapPin",
+        "email": "Mail",
+        "phone": "Phone",
+        "hours": "Clock",
+        "partnership": {
+          "brand": "Building2",
+          "artist": "Palette",
+          "charity": "Heart"
+        }
+      }
+    },
+    "navigation": {
+      "header": {
+        "home": "Home",
+        "about": "Info",
+        "services": "Briefcase",
+        "cases": "FolderOpen",
+        "contact": "MessageCircle"
+      },
+      "dropdown": {
+        "expand": "ChevronDown",
+        "collapse": "ChevronUp"
+      },
+      "mobile": {
+        "menu": "Menu",
+        "close": "X"
+      }
+    },
+    "ui": {
+      "button": {
+        "arrow": "ArrowRight",
+        "external": "ExternalLink",
+        "download": "Download"
+      },
+      "accordion": {
+        "expand": "ChevronDown",
+        "collapse": "ChevronUp"
+      },
+      "tabs": {
+        "previous": "ChevronLeft",
+        "next": "ChevronRight"
+      },
+      "alert": {
+        "success": "CheckCircle2",
+        "error": "XCircle",
+        "warning": "AlertTriangle",
+        "info": "Info"
+      }
+    }
+  },
+  "notes": [
+    "All icons from lucide-react library",
+    "Consistent 24px size for navigation icons",
+    "Consistent 20px size for inline icons",
+    "Use outline style for most icons",
+    "Fill style only for active states or important CTAs"
+  ]
+}

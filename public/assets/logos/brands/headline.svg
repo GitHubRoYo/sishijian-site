@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40">
+  <!-- 頭條日報 (Headline Daily) - "頭條" bold -->
+  <text x="60" y="18" font-family="'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="22" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="4">頭條</text>
+  <text x="60" y="34" font-family="'Noto Sans SC', 'PingFang SC', sans-serif" font-size="9" font-weight="400" fill="#ffffff" text-anchor="middle" letter-spacing="2" opacity="0.7">HEADLINE DAILY</text>
+</svg>

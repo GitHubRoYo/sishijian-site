@@ -1,0 +1,96 @@
+{
+  "common": {
+    "ctaConsult": "立即咨询",
+    "learnMore": "了解更多",
+    "viewAllCases": "查看全部案例",
+    "submit": "提交",
+    "submitting": "提交中",
+    "required": "必填",
+    "optional": "选填"
+  },
+  "nav": {
+    "home": "首页",
+    "about": "关于我们",
+    "services": "服务",
+    "cases": "成功案例",
+    "contact": "联系我们"
+  },
+  "contact": {
+    "title": "联系我们",
+    "subtitle": "留下需求，我们会尽快跟进。",
+    "fields": {
+      "name": "姓名",
+      "company": "公司",
+      "phone": "电话",
+      "email": "电邮",
+      "interests": "感兴趣的业务方向",
+      "partnershipType": "合作类型",
+      "industry": "行业",
+      "message": "需求描述"
+    },
+    "interests": {
+      "brandAdvertising": "品牌广告业务",
+      "cultureArt": "文化艺术业务",
+      "intangibleHeritage": "非遗教育与深度体验",
+      "culturalExperience": "文化游学与在地探索",
+      "other": "其他"
+    },
+    "partnershipTypes": {
+      "brandClient": "品牌客户合作",
+      "artist": "非遗传承人／艺术家合作",
+      "charity": "公益机构合作",
+      "media": "媒体合作",
+      "other": "其他"
+    },
+    "placeholders": {
+      "name": "请输入您的姓名",
+      "company": "请输入公司名称",
+      "phone": "请输入联系电话",
+      "email": "请输入电邮地址",
+      "partnershipType": "请选择合作类型",
+      "industry": "请选择行业",
+      "message": "请简要描述您的需求或挑战"
+    },
+    "validationError": "请检查必填字段，并确保电邮格式正确。",
+    "successTitle": "已收到您的资料",
+    "successDesc": "我们会尽快与您联系。",
+    "errorTitle": "提交未成功",
+    "errorDesc": "请稍后再试。"
+  },
+  "leadModal": {
+    "title": "立即咨询",
+    "subtitle": "留下基本信息，我们会在工作时间内跟进，并提供初步方向建议。",
+    "submit": "提交咨询",
+    "close": "关闭",
+    "successTitle": "已收到您的咨询",
+    "successDesc": "我们会通过您留下的联系方式与您跟进。",
+    "errorTitle": "提交未成功",
+    "submitError": "请稍后再试。",
+    "validationError": "请检查必填字段，并确保电邮格式正确。",
+    "validationNeedContact": "请至少填写电话或电邮，方便我们与您联系。",
+    "placeholders": {
+      "name": "您的姓名",
+      "company": "公司名称（选填）",
+      "phone": "电话（可留 WhatsApp）",
+      "email": "电邮",
+      "message": "可简要描述目标、档期或目前的挑战（选填）"
+    },
+    "whatYouGetTitle": "提交后您会得到",
+    "whatYouGet1": "需求与目标快速梳理",
+    "whatYouGet2": "适配的服务模块与合作方式建议",
+    "whatYouGet3": "下一步行动与所需资料清单",
+    "privacyNote": "我们仅会把信息用于联系与方案跟进，不会用于其他用途。"
+  },
+  "newsletter": {
+    "title": "订阅 EDM",
+    "subtitle": "获取最新案例与活动资讯",
+    "placeholder": "输入电邮地址",
+    "submit": "订阅",
+    "submitting": "提交中",
+    "note": "你可随时取消订阅。我们不会把你的电邮用于其他用途。",
+    "invalidEmail": "请输入有效的电邮地址。",
+    "success": "订阅成功，感谢关注。",
+    "alreadySubscribed": "你已订阅，感谢关注。",
+    "error": "提交未成功，请稍后再试。"
+  }
+}
