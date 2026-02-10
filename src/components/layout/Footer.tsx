@@ -34,8 +34,17 @@ export async function Footer({ locale, navigation, siteSettings }: FooterProps) 
   const address = (siteSettings.contact?.address && siteSettings.contact.address.length > 5) ? siteSettings.contact.address : '香港馬灣珀欣路33號馬灣1868'
 
   return (
-    <footer className="border-t border-[hsl(var(--brand-gold)/0.2)] bg-[hsl(var(--brand-dark))] text-white selection:bg-[hsl(var(--brand-gold))] selection:text-black">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 selection:bg-[hsl(var(--brand-gold))] selection:text-black">
+    <footer className="border-t border-[hsl(var(--brand-gold)/0.2)] bg-[hsl(var(--brand-dark))] text-white selection:bg-[hsl(var(--brand-gold))] selection:text-black relative overflow-hidden">
+      {/* Background Texture */}
+      <div className="absolute inset-0 pointer-events-none opacity-5">
+         <Image
+           src="/assets/seed/misc-web-asset-04.jpg" // Subtle texture
+           alt=""
+           fill
+           className="object-cover"
+         />
+      </div>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 selection:bg-[hsl(var(--brand-gold))] selection:text-black relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           <div className="space-y-4">
             <div className="flex items-center gap-3">

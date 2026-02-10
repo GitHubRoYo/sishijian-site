@@ -155,8 +155,17 @@ export default async function HomePage({ params }: HomePageProps) {
       </section>
 
       {/* ===== SERVICES ===== */}
-      <section className="py-24 md:py-32 section-warm relative">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-24 md:py-32 section-warm relative overflow-hidden">
+        {/* Background Image for Services */}
+        <div className="absolute inset-0 z-0">
+           <Image 
+             src="/assets/seed/misc-web-asset-02.jpg"
+             alt=""
+             fill
+             className="object-cover opacity-5"
+           />
+        </div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Section header */}
           <div className="max-w-3xl mb-16">
             <p className="text-sm font-medium tracking-widest uppercase text-[hsl(var(--brand-crimson))] mb-3">
@@ -323,6 +332,17 @@ export default async function HomePage({ params }: HomePageProps) {
 
       {/* ===== BRAND WALL ===== */}
       <section className="relative py-24 md:py-32 section-dark overflow-hidden">
+        {/* Background Image for Brand Wall */}
+        <div className="absolute inset-0">
+           <Image 
+             src="/assets/seed/analytics-dashboard.png" 
+             alt="" 
+             fill 
+             className="object-cover opacity-10 mix-blend-overlay"
+           />
+           <div className="absolute inset-0 bg-gradient-to-br from-[hsl(28_18%_6%/0.9)] to-[hsl(28_18%_6%/0.8)]" />
+        </div>
+
         {/* Ambient light */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-[10%] left-[5%] w-[40%] h-[40%] rounded-full bg-[hsl(40_42%_48%/0.04)] blur-[100px]" />

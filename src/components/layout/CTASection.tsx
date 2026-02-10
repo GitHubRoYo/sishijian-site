@@ -11,6 +11,7 @@ interface CTASectionProps {
     buttonText?: string
     source?: string
     className?: string
+    backgroundImage?: string
 }
 
 export function CTASection({
@@ -20,15 +21,28 @@ export function CTASection({
     buttonText = '立即諮詢',
     source = 'cta-section',
     className,
+    backgroundImage = '/assets/seed/presentation-slide-05.png',
 }: CTASectionProps) {
     return (
         <section className={cn("py-24 md:py-32", className)}>
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="relative rounded-3xl overflow-hidden section-accent">
+                    {/* Background Image */}
+                    {backgroundImage && (
+                        <div className="absolute inset-0 z-0">
+                           <img 
+                             src={backgroundImage} 
+                             alt="" 
+                             className="w-full h-full object-cover opacity-10 mix-blend-overlay"
+                           />
+                           <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--brand-crimson)/0.9)] to-[hsl(var(--brand-gold)/0.9)] mix-blend-multiply" />
+                        </div>
+                    )}
+
                     {/* Decorative elements */}
-                    <div className="absolute inset-0 overflow-hidden">
-                        <div className="absolute -top-[30%] -right-[10%] w-[50%] h-[80%] rounded-full bg-[hsl(40_42%_48%/0.08)] blur-[80px]" />
-                        <div className="absolute -bottom-[20%] -left-[5%] w-[40%] h-[60%] rounded-full bg-[hsl(348_50%_45%/0.1)] blur-[60px]" />
+                    <div className="absolute inset-0 overflow-hidden z-0">
+                        <div className="absolute -top-[30%] -right-[10%] w-[50%] h-[80%] rounded-full bg-[hsl(40_42%_48%/0.2)] blur-[80px]" />
+                        <div className="absolute -bottom-[20%] -left-[5%] w-[40%] h-[60%] rounded-full bg-[hsl(348_50%_45%/0.2)] blur-[60px]" />
                     </div>
                     {/* Subtle grid pattern */}
                     <div className="absolute inset-0 opacity-[0.03]" style={{

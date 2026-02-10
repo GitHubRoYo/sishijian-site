@@ -49,8 +49,16 @@ export default async function AboutPage({ params }: AboutPageProps) {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 md:py-28 section-warm">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 md:py-28 section-warm relative overflow-hidden">
+         <div className="absolute inset-0 pointer-events-none">
+           <Image
+             src="/assets/seed/misc-web-asset-01.jpg"
+             alt=""
+             fill
+             className="object-cover opacity-5"
+           />
+         </div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid md:grid-cols-2 gap-8">
             <Card className="border-0 shadow-md bg-white gold-border-top">
               <CardHeader>
@@ -170,8 +178,16 @@ export default async function AboutPage({ params }: AboutPageProps) {
       </section>
 
       {/* Core Advantages */}
-      <section className="py-20 md:py-28 section-warm">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 md:py-28 section-warm relative overflow-hidden">
+         <div className="absolute inset-0 pointer-events-none">
+           <Image
+             src="/assets/seed/misc-web-asset-04.jpg"
+             alt=""
+             fill
+             className="object-cover opacity-5"
+           />
+         </div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <p className="text-sm font-medium tracking-widest uppercase text-[hsl(var(--brand-crimson))] mb-3">
               Advantages

@@ -187,8 +187,16 @@ export async function ServicePageTemplate({ locale, slug }: { locale: Locale; sl
       </section>
 
       {/* Core Services - Alternating Layout (Extended) */}
-      <section className="py-20 md:py-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 md:py-24 relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+           <Image 
+             src="/assets/seed/misc-web-asset-03.jpg"
+             alt=""
+             fill
+             className="object-cover opacity-[0.03]"
+           />
+        </div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl mb-16">
             <h2 className="text-3xl md:text-4xl font-bold">核心服務模組</h2>
             <p className="mt-4 text-lg text-muted-foreground">可按需要從單點支援到全案整合，並保留後續擴展空間。</p>
