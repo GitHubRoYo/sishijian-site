@@ -9,6 +9,7 @@ import { ConsultButton } from '@/components/leads/ConsultButton'
 import { Locale } from '@/lib/i18n'
 import { lexicalToPlainText } from '@/lib/lexicalPlainText'
 import { getMediaURL, find, type CaseDoc } from '@/lib/api'
+import { defaultCaseDetails, defaultFeaturedCases } from '@/lib/defaultContent'
 
 export const dynamic = 'force-dynamic'
 
@@ -36,9 +37,10 @@ export default async function CaseDetailPage({ params }: CaseDetailPageProps) {
   const { locale, slug } = await params
   const res = await find<CaseDoc>('cases', locale, {
     'where[slug][equals]': slug,
+    'where[slug][equals]': slug,
     limit: 1,
   })
-  const doc = res.docs[0]
+  const doc = res.docs[0] || defaultCaseDetails[slug]
 
   if (!doc) notFound()
 
@@ -210,7 +212,7 @@ export default async function CaseDetailPage({ params }: CaseDetailPageProps) {
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-3">
-                    {relatedRes.docs.map((r) => (
+                    {relatedDocs.map((r) => (
                       <Link
                         key={r.id}
                         href={`/${locale}/cases/${r.slug}`}

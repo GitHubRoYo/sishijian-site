@@ -108,6 +108,63 @@ export const defaultFeaturedCases: CaseDoc[] = [
   },
 ]
 
+export const defaultCaseDetails: Record<string, CaseDoc> = {
+  'heritage-brand-revival': {
+    id: 'demo-1',
+    slug: 'heritage-brand-revival',
+    title: '傳統老字號品牌活化',
+    summary: '為一家百年老字號品牌打造全新的品牌形象與數碼營銷策略，成功提升品牌知名度並吸引年輕消費群體。',
+    businessType: 'brand-advertising',
+    status: 'published',
+    featured: true,
+    cover: '/assets/seed/hong-kong-scenery.png',
+    background: simpleLexical('該品牌擁有超過百年歷史，但隨著市場年輕化，其品牌形象逐漸老化，難以吸引新一代消費者。面臨的主要挑戰包括：品牌知名度在年輕群體中較低、產品包裝缺乏吸引力、線上銷售渠道薄弱。'),
+    strategy: simpleLexical('1. 品牌重塑：保留傳統元素的同時，融入現代簡約設計風格，更新品牌 Logo 與包裝。\n2. 跨界合作：與本地插畫師聯名推出限定禮盒，製造話題。\n3. 社交媒體運營：開設 Instagram 與小紅書賬號，通過短視頻講述品牌歷史故事。'),
+    results: simpleLexical('• 品牌年輕化指數提升 40%\n• 線上銷售額同比增長 150%\n• 社交媒體粉絲增長至 50,000+'),
+    gallery: [
+      { image: '/assets/seed/presentation-slide-01.png', caption: '新包裝設計' },
+      { image: '/assets/seed/presentation-slide-02.png', caption: '線下快閃店' },
+    ],
+    servicesUsed: [{ title: '品牌策略' } as any, { title: '包裝設計' } as any, { title: '數碼營銷' } as any],
+  },
+  'intangible-heritage-exhibition': {
+    id: 'demo-2',
+    slug: 'intangible-heritage-exhibition',
+    title: '非遺文化藝術展覽策劃',
+    summary: '策劃並執行大型非物質文化遺產展覽，吸引超過10萬人次參觀，成功推動文化傳承與公眾教育。',
+    businessType: 'culture-art',
+    status: 'published',
+    featured: true,
+    cover: '/assets/seed/culture-fabric-art.png',
+    background: simpleLexical('旨在通過現代展覽形式，讓更多公眾了解並喜愛傳統非遺文化。挑戰在於如何將靜態的展品轉化為互動性強、傳播力廣的現代藝術體驗。'),
+    strategy: simpleLexical('1. 沉浸式策展：利用光影科技與裝置藝術，還原非遺製作場景。\n2. 互動體驗區：設置手作工作坊，讓觀眾親手體驗非遺工藝。\n3. 數字化導覽：開發 AR 小程序，實現展品背後故事的數字化解讀。'),
+    results: simpleLexical('• 展覽參觀人次突破 10 萬\n• 媒體曝光量超過 500 萬\n• 觀眾滿意度高達 98%'),
+    gallery: [
+      { image: '/assets/seed/hk-street-art.png', caption: '展覽入口' },
+      { image: '/assets/seed/charity-foundation.jpg', caption: '互動體驗區' },
+    ],
+    servicesUsed: [{ title: '展覽策劃' } as any, { title: '空間設計' } as any, { title: '公關傳播' } as any],
+  },
+  'cross-border-campaign': {
+    id: 'demo-3',
+    slug: 'cross-border-campaign',
+    title: '跨境品牌推廣方案',
+    summary: '為國際品牌進入大灣區市場制定本地化策略，整合線上線下渠道實現品牌落地與市場拓展。',
+    businessType: 'brand-advertising',
+    status: 'published',
+    featured: true,
+    cover: '/assets/seed/presentation-cover.png',
+    background: simpleLexical('某國際知名護膚品牌計劃進入大灣區市場，但面臨文化差異與激烈的本土競爭。需要一套既符合品牌國際調性，又能打動本地消費者的市場進入策略。'),
+    strategy: simpleLexical('1. 本地化內容矩陣：針對大灣區用戶習慣，定製粵語與普通話雙語內容。\n2. 雙微一抖一紅：全佈局微信、微博、抖音、小紅書，精準種草。\n3. KOC 試用計劃：招募千名素人體驗官，建立口碑護城河。'),
+    results: simpleLexical('• 首發活動觸達用戶 200 萬+\n• 轉化率高於行業平均水平 30%\n• 成功建立大灣區核心社群'),
+    gallery: [
+      { image: '/assets/seed/analytics-dashboard.png', caption: '數據分析報告' },
+      { image: '/assets/seed/social-media.png', caption: '社交媒體矩陣' },
+    ],
+    servicesUsed: [{ title: '市場進入策略' } as any, { title: '社交電商' } as any, { title: 'KOL 管理' } as any],
+  },
+}
+
 // ---------- Service Pages ----------
 
 export const defaultServicePages: Record<string, ServicePage> = {
