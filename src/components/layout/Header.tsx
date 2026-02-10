@@ -16,6 +16,7 @@ import {
 import { cn } from "@/lib/utils"
 import { localeLabels, locales, Locale } from "@/lib/i18n"
 import type { NavigationGlobal, SiteSettingsGlobal } from '@/lib/api'
+import { defaultHeaderNav } from '@/lib/defaultContent'
 
 interface HeaderProps {
   locale: Locale
@@ -47,7 +48,9 @@ export function Header({ locale, navigation, siteSettings }: HeaderProps) {
   const searchParams = useSearchParams()
 
   const headerNav = useMemo(() => {
-    const items = navigation.headerNav || []
+    const items = (navigation.headerNav && navigation.headerNav.length > 0)
+      ? navigation.headerNav
+      : defaultHeaderNav
     return [...items].sort((a, b) => (a.order || 0) - (b.order || 0))
   }, [navigation.headerNav])
 

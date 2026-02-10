@@ -5,6 +5,7 @@ import type { NavigationGlobal, SiteSettingsGlobal } from '@/lib/api'
 import { getTranslations } from 'next-intl/server'
 import { NewsletterForm } from '@/components/newsletter/NewsletterForm'
 import { FooterSocial } from '@/components/layout/FooterSocial'
+import { defaultFooterNav } from '@/lib/defaultContent'
 
 interface FooterProps {
   locale: Locale
@@ -23,7 +24,9 @@ const withLocale = (locale: Locale, url: string) => {
 export async function Footer({ locale, navigation, siteSettings }: FooterProps) {
   const t = await getTranslations({ locale, namespace: 'newsletter' })
 
-  const footerColumns = navigation.footerNav || []
+  const footerColumns = (navigation.footerNav && navigation.footerNav.length > 0)
+    ? navigation.footerNav
+    : defaultFooterNav
   const footerBottom = navigation.footerBottom
   const brand = siteSettings.companyNameShort || '四時鑑'
   const brandLong = siteSettings.companyName || ''

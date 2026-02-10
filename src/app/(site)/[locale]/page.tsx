@@ -17,6 +17,7 @@ import {
   type HomepageGlobal,
   type SiteSettingsGlobal,
 } from '@/lib/api'
+import { defaultHero, defaultServiceItems, defaultFeaturedCases } from '@/lib/defaultContent'
 
 export const dynamic = 'force-dynamic'
 
@@ -72,6 +73,19 @@ export default async function HomePage({ params }: HomePageProps) {
 
   const heroImage = getMediaURL(homepage.hero?.backgroundImage as any)
 
+  // Use default content when CMS returns empty
+  const hero = {
+    ...defaultHero,
+    ...homepage.hero,
+    title: homepage.hero?.title || defaultHero.title,
+    subtitle: homepage.hero?.subtitle || defaultHero.subtitle,
+    description: homepage.hero?.description || defaultHero.description,
+  }
+  const serviceItems = (homepage.services?.items && homepage.services.items.length > 0)
+    ? homepage.services.items
+    : defaultServiceItems
+  const featuredDocs = featured.docs.length > 0 ? featured.docs : defaultFeaturedCases
+
   return (
     <>
       {/* ===== HERO ===== */}
@@ -98,20 +112,16 @@ export default async function HomePage({ params }: HomePageProps) {
 
             {/* Title */}
             <h1 className="mt-8 text-4xl md:text-6xl lg:text-[4rem] font-bold font-serif tracking-tight leading-[1.1] text-gradient-gold drop-shadow-sm">
-              {homepage.hero?.title || '四時更迭，鑑往知來'}
+              {hero.title}
             </h1>
 
-            {homepage.hero?.subtitle ? (
-              <p className="mt-6 text-xl md:text-2xl text-[hsl(38,14%,72%)] font-light leading-relaxed">
-                {homepage.hero.subtitle}
-              </p>
-            ) : null}
+            <p className="mt-6 text-xl md:text-2xl text-[hsl(38,14%,72%)] font-light leading-relaxed">
+              {hero.subtitle}
+            </p>
 
-            {homepage.hero?.description ? (
-              <p className="mt-5 text-base md:text-lg text-[hsl(38,10%,50%)] leading-relaxed max-w-2xl">
-                {homepage.hero.description}
-              </p>
-            ) : null}
+            <p className="mt-5 text-base md:text-lg text-[hsl(38,10%,50%)] leading-relaxed max-w-2xl">
+              {hero.description}
+            </p>
 
             {/* CTA buttons */}
             <div className="mt-12 flex flex-col sm:flex-row gap-4">
@@ -122,7 +132,7 @@ export default async function HomePage({ params }: HomePageProps) {
                 className="bg-[hsl(40,42%,48%)] text-[hsl(28,18%,6%)] hover:bg-[hsl(40,42%,55%)] font-semibold shadow-lg shadow-[hsl(40_42%_48%/0.15)]"
               >
                 <span className="inline-flex items-center">
-                  {homepage.hero?.ctaPrimary?.label || '立即諮詢'}
+                  {hero.ctaPrimary?.label || '立即諮詢'}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </span>
               </ConsultButton>
@@ -132,8 +142,8 @@ export default async function HomePage({ params }: HomePageProps) {
                 className="backdrop-blur-sm"
                 asChild
               >
-                <Link href={`/${locale}${homepage.hero?.ctaSecondary?.url || '/services'}`}>
-                  {homepage.hero?.ctaSecondary?.label || '了解更多服務'}
+                <Link href={`/${locale}${hero.ctaSecondary?.url || '/services'}`}>
+                  {hero.ctaSecondary?.label || '了解更多服務'}
                 </Link>
               </Button>
             </div>
@@ -163,7 +173,7 @@ export default async function HomePage({ params }: HomePageProps) {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {(homepage.services?.items || []).slice(0, 2).map((item, idx) => {
+            {(serviceItems || []).slice(0, 2).map((item, idx) => {
               const imgData = serviceImages[item.url || '']
               const isFirst = idx === 0
               return (
@@ -254,7 +264,7 @@ export default async function HomePage({ params }: HomePageProps) {
           </div>
 
           <div className="grid md:grid-cols-3 gap-7">
-            {featured.docs.slice(0, 6).map((c) => {
+            {featuredDocs.slice(0, 6).map((c) => {
               const cover = getMediaURL(c.cover as any)
               const industryName =
                 typeof c.industry === 'object' ? c.industry?.name : undefined
