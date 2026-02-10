@@ -37,10 +37,10 @@ export default async function CaseDetailPage({ params }: CaseDetailPageProps) {
   const { locale, slug } = await params
   const res = await find<CaseDoc>('cases', locale, {
     'where[slug][equals]': slug,
-    'where[slug][equals]': slug,
     limit: 1,
   })
   const doc = res.docs[0] || defaultCaseDetails[slug]
+  console.log(`[CaseDetailPage] Found doc: ${doc ? 'yes' : 'no'}, title: ${doc?.title}`)
 
   if (!doc) notFound()
 
@@ -55,6 +55,15 @@ export default async function CaseDetailPage({ params }: CaseDetailPageProps) {
     limit: 2,
     sort: '-updatedAt',
   })
+
+  // Fallback for related cases if CMS returns few/none
+  let relatedDocs = relatedRes.docs
+  if (relatedDocs.length < 2) {
+    const fallbackRelated = defaultFeaturedCases
+      .filter((c) => c.slug !== slug && (bt ? c.businessType === bt : true))
+      .slice(0, 2 - relatedDocs.length)
+    relatedDocs = [...relatedDocs, ...fallbackRelated]
+  }
 
   return (
     <>
