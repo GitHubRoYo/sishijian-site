@@ -71,7 +71,7 @@ export default async function HomePage({ params }: HomePageProps) {
     }),
   ])
 
-  const heroImage = getMediaURL(homepage.hero?.backgroundImage as any)
+  const heroImage = getMediaURL((homepage.hero?.backgroundImage || defaultHero.backgroundImage) as any)
 
   // Use default content when CMS returns empty
   const hero = {

@@ -39,7 +39,7 @@ export default async function CasesPage({ params }: CasesPageProps) {
       <section className="relative overflow-hidden section-dark py-20 md:py-28">
         <div className="absolute inset-0">
           <Image
-            src="/assets/seed/misc-web-asset-03.jpg"
+            src="/assets/seed/presentation-cover-alt.png"
             alt="成功案例背景"
             fill
             priority

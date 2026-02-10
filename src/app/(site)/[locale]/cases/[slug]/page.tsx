@@ -220,17 +220,31 @@ export default async function CaseDetailPage({ params }: CaseDetailPageProps) {
                   <CardTitle className="text-lg">相關案例</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="space-y-3">
-                    {relatedDocs.map((r) => (
+                  <div className="space-y-4">
+                    {relatedDocs.map((r) => {
+                       const relatedCover = getMediaURL(r.cover as any)
+                       return (
                       <Link
                         key={r.id}
                         href={`/${locale}/cases/${r.slug}`}
-                        className="block p-3 rounded-lg hover:bg-muted transition-colors"
+                        className="group block rounded-lg overflow-hidden border bg-card hover:bg-muted transition-colors"
                       >
-                        <div className="font-medium text-sm">{r.title}</div>
-                        <div className="text-xs text-muted-foreground">{typeof r.industry === 'object' ? r.industry?.name : ''}</div>
+                         <div className="relative aspect-video bg-muted overflow-hidden">
+                           {relatedCover ? (
+                             <Image
+                               src={relatedCover}
+                               alt={r.title || '案例封面'}
+                               fill
+                               className="object-cover transition-transform duration-500 group-hover:scale-105"
+                             />
+                           ) : null}
+                         </div>
+                        <div className="p-3">
+                          <div className="font-medium text-sm group-hover:text-primary transition-colors">{r.title}</div>
+                          <div className="text-xs text-muted-foreground mt-1">{typeof r.industry === 'object' ? r.industry?.name : ''}</div>
+                        </div>
                       </Link>
-                    ))}
+                    )})}
                   </div>
                 </CardContent>
               </Card>

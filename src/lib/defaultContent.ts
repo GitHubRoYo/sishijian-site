@@ -59,6 +59,7 @@ export const defaultHero: NonNullable<HomepageGlobal['hero']> = {
   title: '四時更迭，鑑往知來',
   subtitle: '品牌與中國文化推廣的商業賦能平台',
   description: '以「品牌廣告」與「文化藝術」雙輪驅動，為品牌量身打造全方位的推廣策略，助力品牌實現可持續增長。',
+  backgroundImage: '/assets/seed/hong-kong-scenery.png',
   ctaPrimary: { label: '立即諮詢', url: '/contact' },
   ctaSecondary: { label: '了解更多服務', url: '/services' },
 }
