@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import { Locale } from '@/lib/i18n'
 import { find, type CaseDoc, type Taxonomy } from '@/lib/api'
+import { defaultFeaturedCases, defaultIndustries } from '@/lib/defaultContent'
 import { CasesExplorer } from '@/components/cases/CasesExplorer'
 
 export const dynamic = 'force-dynamic'
@@ -62,7 +63,11 @@ export default async function CasesPage({ params }: CasesPageProps) {
 
       <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <CasesExplorer locale={locale} cases={casesRes.docs} industries={industriesRes.docs} />
+          <CasesExplorer
+            locale={locale}
+            cases={casesRes.docs.length > 0 ? casesRes.docs : defaultFeaturedCases}
+            industries={industriesRes.docs.length > 0 ? industriesRes.docs : defaultIndustries}
+          />
         </div>
       </section>
     </>

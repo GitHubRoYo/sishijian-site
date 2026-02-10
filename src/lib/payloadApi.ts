@@ -132,6 +132,7 @@ export type ServicePage = {
   quickCheck?: Array<{ condition?: string; result?: string }>
   faq?: Array<{ question?: string; answer?: any }>
   ctaTitle?: string
+  ctaDescription?: string
   ctaButtonText?: string
   seo?: { title?: string; description?: string }
 }

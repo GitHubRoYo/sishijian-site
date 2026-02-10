@@ -20,6 +20,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { Locale } from '@/lib/i18n'
 import { lexicalToPlainText } from '@/lib/lexicalPlainText'
 import { getMediaURL, find, type ServicePage } from '@/lib/api'
+import { defaultServicePages } from '@/lib/defaultContent'
 
 const iconMap: Record<string, any> = {
   Radio,
@@ -126,7 +127,7 @@ export async function ServicePageTemplate({ locale, slug }: { locale: Locale; sl
     limit: 1,
   })
 
-  const doc = res.docs[0]
+  const doc = res.docs[0] || defaultServicePages[slug]
   const hero = getMediaURL(doc?.heroImage as any)
 
   if (!doc) {

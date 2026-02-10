@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { ServicePageTemplate } from '@/components/services/ServicePageTemplate'
 import { Locale } from '@/lib/i18n'
 import { find, type ServicePage } from '@/lib/api'
+import { defaultServicePages } from '@/lib/defaultContent'
 
 export const dynamic = 'force-dynamic'
 
@@ -15,7 +16,7 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
     'where[slug][equals]': 'culture-art',
     limit: 1,
   })
-  const doc = res.docs[0]
+  const doc = res.docs[0] || defaultServicePages['culture-art']
 
   return {
     title: doc?.seo?.title || '文化藝術業務 - 四時鑑',
