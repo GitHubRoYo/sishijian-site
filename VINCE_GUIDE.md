@@ -13,7 +13,6 @@
 
 | 變量名 (Key) | 值 (Value) |
 | :--- | :--- |
-| `NEXT_PUBLIC_CMS_PROVIDER` | `strapi` |
 | `NEXT_PUBLIC_STRAPI_URL` | `https://mighty-ants-3f2eafb335.strapiapp.com` |
 
 填好後，記得在 Deployments 頁面點 Redeploy (重新部署)。
@@ -73,8 +72,8 @@ git push -u origin main
 3. 選擇 **Import Git Repository** 並連接您的 GitHub。
 4. 選擇 `sishijian-site` 專案 (如果沒看到，請先運行下面的 `deploy.sh` 腳本)。
 5. **重要設定**：在 Environment Variables (環境變數) 裡，填入：
-   - `NEXT_PUBLIC_CMS_PROVIDER`: `strapi`
    - `NEXT_PUBLIC_STRAPI_URL`: (填入您部署好的 CMS 網址，見下文)
+   - `STRAPI_API_TOKEN`: (填入 Strapi API Token)
 6. 點擊 **Deploy**。
 
 ### Strapi Cloud (後台部署 - Backend)
