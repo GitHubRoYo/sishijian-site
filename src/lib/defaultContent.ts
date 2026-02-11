@@ -59,7 +59,7 @@ export const defaultHero: NonNullable<HomepageGlobal['hero']> = {
   title: '四時更迭，鑑往知來',
   subtitle: '品牌與中國文化推廣的商業賦能平台',
   description: '以「品牌廣告」與「文化藝術」雙輪驅動，為品牌量身打造全方位的推廣策略，助力品牌實現可持續增長。',
-  backgroundImage: '/assets/seed/hong-kong-scenery.png',
+  backgroundImage: '/assets/seed/hero-hong-kong-skyline.jpg',
   ctaPrimary: { label: '立即諮詢', url: '/contact' },
   ctaSecondary: { label: '了解更多服務', url: '/services' },
 }
@@ -88,6 +88,7 @@ export const defaultFeaturedCases: CaseDoc[] = [
     businessType: 'brand-advertising',
     status: 'published',
     featured: true,
+    cover: '/assets/seed/hong-kong-scenery.png',
   },
   {
     id: 'demo-2',
@@ -97,6 +98,7 @@ export const defaultFeaturedCases: CaseDoc[] = [
     businessType: 'culture-art',
     status: 'published',
     featured: true,
+    cover: '/assets/seed/culture-fabric-art.png',
   },
   {
     id: 'demo-3',
@@ -106,6 +108,7 @@ export const defaultFeaturedCases: CaseDoc[] = [
     businessType: 'brand-advertising',
     status: 'published',
     featured: true,
+    cover: '/assets/seed/presentation-cover.png',
   },
 ]
 

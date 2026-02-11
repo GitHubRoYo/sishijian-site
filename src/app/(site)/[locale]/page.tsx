@@ -97,7 +97,7 @@ export default async function HomePage({ params }: HomePageProps) {
         </div>
         {heroImage ? (
           <div className="absolute inset-0">
-            <Image src={heroImage} alt="" fill priority className="object-cover opacity-12" />
+            <Image src={heroImage} alt="" fill priority className="object-cover opacity-20" />
             <div className="absolute inset-0 bg-gradient-to-b from-[hsl(28_18%_6%/0.5)] via-[hsl(28_18%_6%/0.7)] to-[hsl(28_18%_6%)]" />
           </div>
         ) : null}

@@ -210,10 +210,12 @@ export const strapiMediaURL = (media?: PayloadMedia | string | null): string | n
   if (!media) return null
   if (typeof media === 'string') {
     if (media.startsWith('http')) return media
+    if (media.startsWith('/assets/')) return media // local public assets
     return `${getStrapiURL()}${media}`
   }
   if (media.url) {
     if (media.url.startsWith('http')) return media.url
+    if (media.url.startsWith('/assets/')) return media.url // local public assets
     return `${getStrapiURL()}${media.url}`
   }
   return null
