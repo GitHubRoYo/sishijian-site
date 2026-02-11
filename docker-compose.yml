@@ -24,10 +24,8 @@ services:
       dockerfile: Dockerfile
     container_name: sishijian-web
     environment:
-      - DATABASE_URI=postgresql://sishijian:sishijian123@postgres:5432/sishijian
-      - PAYLOAD_SECRET=your-secret-key-here-change-in-production
       - NEXT_PUBLIC_SERVER_URL=http://localhost:3000
-      - PAYLOAD_PUBLIC_SERVER_URL=http://localhost:3000
+      - NEXT_PUBLIC_STRAPI_URL=http://host.docker.internal:1337
     ports:
       - "3000:3000"
     depends_on:
@@ -35,7 +33,6 @@ services:
         condition: service_healthy
     volumes:
       - ./public:/app/public
-      - ./media:/app/media
 
 volumes:
   postgres_data:

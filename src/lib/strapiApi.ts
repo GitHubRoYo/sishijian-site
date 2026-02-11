@@ -1,30 +1,9 @@
 /**
- * Strapi API adapter — 与 payloadApi.ts 接口对齐
- * 用于对接 sishijian-cms (Strapi 5) 的 REST API
+ * Strapi API adapter — 对接 sishijian-cms (Strapi 5) REST API
  */
 
 import type { Locale } from './i18n'
-
-// Re-export shared types from payloadApi so callers can stay type-compatible
-export type {
-  PayloadMedia,
-  NavigationGlobal,
-  SiteSettingsGlobal,
-  HomepageGlobal,
-  ServicePage,
-  Taxonomy,
-  CaseDoc,
-} from './payloadApi'
-
-import type {
-  PayloadMedia,
-  NavigationGlobal,
-  SiteSettingsGlobal,
-  HomepageGlobal,
-  ServicePage,
-  Taxonomy,
-  CaseDoc,
-} from './payloadApi'
+import type { Media, FindResponse } from './types'
 
 // ---------- helpers ----------
 
@@ -34,7 +13,6 @@ const getStrapiURL = () => {
 
 /** Map our locale codes to Strapi locale codes */
 const mapLocale = (locale: Locale): string => {
-  // Strapi 5 uses standard BCP-47 tags; adjust if Strapi is configured differently
   const map: Record<string, string> = {
     'zh-HK': 'zh-Hant-HK',
     'zh-Hans': 'zh-Hans',
@@ -77,7 +55,6 @@ function flattenRelations(attrs: Record<string, any> | undefined): Record<string
   const out: Record<string, any> = {}
   for (const [key, val] of Object.entries(attrs)) {
     if (val && typeof val === 'object' && 'data' in val) {
-      // Relation field
       if (Array.isArray(val.data)) {
         out[key] = val.data.map((d: any) => ({ id: String(d.id), ...d.attributes }))
       } else if (val.data) {
@@ -90,21 +67,11 @@ function flattenRelations(attrs: Record<string, any> | undefined): Record<string
   return out
 }
 
-// ---------- public API (mirrors payloadApi) ----------
-
-type FindResponse<T> = {
-  docs: T[]
-  totalDocs: number
-  limit: number
-  totalPages: number
-  page?: number
-  hasPrevPage?: boolean
-  hasNextPage?: boolean
-}
+// ---------- public API ----------
 
 /**
- * Fetch a Strapi Single Type (equivalent to Payload Global).
- * Strapi endpoint: GET /api/{slug}?populate=deep&locale=xx
+ * Fetch a Strapi Single Type (global).
+ * Endpoint: GET /api/{slug}?populate=deep&locale=xx
  */
 export async function strapiGetGlobal<T>(
   slug: string,
@@ -131,8 +98,8 @@ export async function strapiGetGlobal<T>(
 }
 
 /**
- * Fetch a Strapi Collection Type (equivalent to Payload find).
- * Strapi endpoint: GET /api/{collection}?populate=*&locale=xx&pagination[limit]=N&sort=field:dir
+ * Fetch a Strapi Collection Type.
+ * Endpoint: GET /api/{collection}?populate=*&locale=xx&pagination[limit]=N&sort=field:dir
  */
 export async function strapiFind<T>(
   collection: string,
@@ -145,7 +112,6 @@ export async function strapiFind<T>(
   params.set('populate', '*')
   params.set('locale', strapiLocale)
 
-  // Map Payload-style query params to Strapi filters
   for (const [key, val] of Object.entries(qs)) {
     if (val === undefined) continue
     // e.g. 'where[status][equals]' → 'filters[status][$eq]'
@@ -159,7 +125,6 @@ export async function strapiFind<T>(
       continue
     }
     if (key === 'sort') {
-      // Payload sort: '-updatedAt' → Strapi sort: 'updatedAt:desc'
       const sortVal = String(val)
       if (sortVal.startsWith('-')) {
         params.set('sort', `${sortVal.slice(1)}:desc`)
@@ -168,7 +133,7 @@ export async function strapiFind<T>(
       }
       continue
     }
-    if (key === 'depth') continue // handled by populate
+    if (key === 'depth') continue
     params.set(key, String(val))
   }
 
@@ -206,16 +171,16 @@ export async function strapiFind<T>(
  * Build full media URL from Strapi media field.
  * Strapi stores relative URLs like /uploads/file.jpg
  */
-export const strapiMediaURL = (media?: PayloadMedia | string | null): string | null => {
+export const strapiMediaURL = (media?: Media | string | null): string | null => {
   if (!media) return null
   if (typeof media === 'string') {
     if (media.startsWith('http')) return media
-    if (media.startsWith('/assets/')) return media // local public assets
+    if (media.startsWith('/assets/')) return media
     return `${getStrapiURL()}${media}`
   }
   if (media.url) {
     if (media.url.startsWith('http')) return media.url
-    if (media.url.startsWith('/assets/')) return media.url // local public assets
+    if (media.url.startsWith('/assets/')) return media.url
     return `${getStrapiURL()}${media.url}`
   }
   return null
