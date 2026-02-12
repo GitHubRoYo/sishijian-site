@@ -13,6 +13,8 @@
 | Phase 1: 清理 Payload | 已完成 | 源码零 Payload 残留，build 通过 |
 | Phase 2: 创建 API 端点 | 已完成 | `/api/leads` + `/api/subscriptions` |
 | Phase 3: 文档更新 | 已完成 | README/HANDOVER/VINCE_GUIDE/SITE_MAP 更新，旧文档删除 |
+| Phase 4: Strapi 修复 | 已完成 | 修复 API 404, 创建 Subscription collection, 配置权限 |
+| Phase 5: 前后端联调 | 已完成 | Lead/Subscription API 全链路测试通过 |
 
 ---
 
@@ -144,12 +146,31 @@ Strapi POST /api/subscriptions
 
 ---
 
+## Phase 4: Strapi API 修复 (sishijian-cms)
+
+**问题：** Strapi 所有 API 返回 404 — 因为只有 schema.json，缺少 routes/controllers/services 文件
+
+- [x] 为 7 个现有 content type 创建 routes/controllers/services 文件 (21 个文件)
+- [x] 创建新的 `Subscription` collection (schema + routes/controllers/services = 4 个文件)
+- [x] 重启 Strapi，验证 API 正常响应
+- [x] 配置 Public 权限：Lead `create`, Subscription `create` + `find`
+
+## Phase 5: 前后端联调测试
+
+- [x] Frontend health check: OK (Strapi URL + Token 已配置)
+- [x] Homepage: HTTP 200, 261KB (fallback 内容正常渲染)
+- [x] POST /api/leads → Strapi Lead collection: 成功
+- [x] POST /api/subscriptions → Strapi Subscription collection: 成功
+- [x] 重复订阅检测: HTTP 409 "Already subscribed" — 正常
+
+---
+
 ## 后续待办（未完成的工作）
 
 ### 优先级高
-- [ ] 在 Strapi 中创建 `Subscription` collection（用于 Newsletter 订阅）
 - [ ] 在 Vercel 环境变量中设置 `NEXT_PUBLIC_STRAPI_URL` 和 `STRAPI_API_TOKEN`
-- [ ] 确认 Strapi CMS 中已有实际内容数据
+- [ ] 在 Strapi Admin 中填入实际内容数据（Homepage, Navigation, Site Settings, Cases 等）
+- [ ] 部署 Strapi 到线上（Strapi Cloud / VPS）
 
 ### 优先级中
 - [ ] About 页面接入 CMS（目前全硬编码）
